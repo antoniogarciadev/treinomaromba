@@ -37,3 +37,15 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+SubmitButton.vue
+
+UserTable.vue
+
+LoginNew.vue
+
+UserForm.vue
+
+base.css
+
+/backend

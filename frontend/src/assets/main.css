@@ -1,0 +1,54 @@
+/* @import './base.css'; */
+@import 'tailwindcss';
+
+:root {
+  --primary: #ffdf20;
+  --p-hover: #f0b100;
+  --bg: #181818;
+}
+
+#app {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal; */
+  background-color: #000000;
+}
+
+@layer components {
+  .link {
+    @apply text-white hover:text-(--primary);
+  }
+
+  .input-style {
+    @apply w-full mt-1 p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none border border-white/10 hover:border-(--primary) focus:border-(--primary) focus:border;
+  }
+}
+
+/*
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */

@@ -79,12 +79,13 @@
       </swiper-slide>
     </swiper>
 
-   
+
   </div>
 </template>
 
 <script lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import type { Swiper as SwiperInstance } from 'swiper/vue'
 import { Navigation, Autoplay } from 'swiper/modules'
 
 import 'swiper/css'
@@ -99,7 +100,7 @@ export default {
     const modules = [Autoplay, Navigation]
 
     // Funções de log se precisares debugar
-    const onSwiper = (swiper: string) => {// Coloquei o tipo string no swiper
+    const onSwiper = (swiper: typeof SwiperInstance) => {// Coloquei o tipo string no swiper
       console.log(swiper)
     }
     const onSlideChange = () => {

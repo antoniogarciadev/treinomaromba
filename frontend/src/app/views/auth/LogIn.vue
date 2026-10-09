@@ -47,7 +47,7 @@ const users = ref([
 </script>
 
 <template>
-  <section class="flex flex-col items-center justify-center mx-auto bg-[url(../../public/homem.jpg)] bg-center bg-cover bg-linear-to-br from-gray-900 to-gray-800 p-6">
+  <section class="flex flex-col items-center justify-center mx-auto bg-[url(../../public/homem.jpg)] bg-center bg-cover bg-linear-to-br from-gray-900 to-gray-800  md:h-screen py-6">
 
     <div class="h-screen flex flex-row items-center  justify-center py-140 md:py-100 md:px-10 gap-6  max-w-6xl w-[90%]">
 
@@ -64,9 +64,9 @@ const users = ref([
               <label class="text-white text-sm" for="email">
                 Email *
               </label>
-              <input 
-                v-model="email" 
-                type="text" 
+              <input
+                v-model="email"
+                type="text"
                 class="w-full mt-1 p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none border border-white/10 hover:border-(--primary) focus:border-(--primary) focus:border" placeholder="Seu nome"
                 id="name"
               />
@@ -74,14 +74,14 @@ const users = ref([
 
             <div>
               <label class="text-white text-sm" for="email">Password *</label>
-              <input 
-                v-model="password" 
-                type="password" 
+              <input
+                v-model="password"
+                type="password"
                 class="w-full mt-1 p-3 rounded-lg bg-white/20 text-white placeholder-gray-300 outline-none border border-white/10 hover:border-(--primary) focus:border-(--primary) focus:border" placeholder="Senha"
                 id="name"
               />
             </div>
-          
+
             <BaseButton :onClick="handleLogin" :loading="loading">
               Entrar
             </BaseButton>
@@ -93,7 +93,7 @@ const users = ref([
          <!-- USERS LIST -->
         <div class="w-full bg-white/10 backdrop-blur-lg p-4 rounded-2xl border border-white/20 hover:border-(--primary) shadow-xl">
           <h3 class="text-white font-bold mb-3">Usuários de Teste</h3>
-        
+
           <div class="max-h-96 overflow-auto pr-2">
             <div
               v-for="user in users"
@@ -103,7 +103,7 @@ const users = ref([
               <p class="text-white text-sm"><b>Nome:</b> {{ user.username }}</p>
               <p class="text-white text-sm"><b>Email:</b> {{ user.email }}</p>
               <p class="text-white text-sm"><b>Senha:</b> {{ user.password }}</p>
-        
+
               <p class="text-sm">
                 <b class="text-white">Role:</b>
                 <span
@@ -122,6 +122,6 @@ const users = ref([
       </div>
 
     </div>
-    
+
     </section>
 </template>

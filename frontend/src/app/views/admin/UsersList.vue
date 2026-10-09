@@ -48,7 +48,7 @@ const openEdit = (user: User) => {
 </script>
 
 <template>
-  <div class="p-6">
+  <div class="relative py-6 min-[600px]:px-8 md:px-0">
     <div class="flex justify-between mb-4">
       <h1 class="text-2xl font-bold">Usuários</h1>
       <button @click="openCreate" class="bg-green-600 text-white px-3 py-1 rounded">
@@ -105,7 +105,7 @@ const openEdit = (user: User) => {
       <div
         v-for="user in users"
         :key="user.id"
-        class="bg-white/10 border border-white/20 rounded-xl p-4 text-white shadow"
+        class="bg-white/10 border border-white/20 rounded-xl p-2 text-white shadow min-[600px]:p-4"
       >
         <p><span class="font-bold">Nome:</span> {{ user.username }}</p>
         <p class="truncate"><span class="font-bold">Email:</span> {{ user.email }}</p>
@@ -127,10 +127,10 @@ const openEdit = (user: User) => {
 
         <!-- AÇÕES -->
         <div class="flex gap-2 mt-3">
-          <button @click="openEdit(user)" class="bg-blue-600 px-3 py-1 rounded w-full">
+          <button @click="openEdit(user)" class="bg-blue-600 px-2 py-1 rounded w-full">
             Editar
           </button>
-          <button @click="handleDelete(user.id)" class="bg-red-600 px-3 py-1 rounded w-full">
+          <button @click="handleDelete(user.id)" class="bg-red-600 px-2 py-1 rounded w-full">
             Excluir
           </button>
         </div>

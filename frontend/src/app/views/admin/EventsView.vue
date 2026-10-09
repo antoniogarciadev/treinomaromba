@@ -120,9 +120,9 @@ const closeModal = () => {
 </script>
 
 <template>
-  <section class="p-10 text-white flex flex-col  gap-10">
+  <section class="py-10 text-white flex flex-col gap-10">
 
-    <div class="bg-(--bg) p-6 space-y-4 rounded-xl max-w-xl w-full flex flex-col md:flex-row justify-between items-left md:items-centerborder border-white/20">
+    <div class="bg-(--bg) p-6 space-y-4 rounded-xl max-w-xl w-full mx-auto flex flex-col md:flex-row justify-between items-left md:items-centerborder border-white/20">
       <div>
         <h1 class="text-3xl font-bold mb-2">Gerenciar Eventos</h1>
         <p class="text-gray-300">Crie, edite ou apague eventos para os usuários.</p>
@@ -147,7 +147,6 @@ const closeModal = () => {
         v-if="isOpen"
         class="fixed inset-0 flex items-center justify-center"
       >
-
         <!-- BACKDROP -->
         <div
           class="absolute inset-0 bg-black/60 backdrop-blur-sm"
@@ -202,11 +201,11 @@ const closeModal = () => {
     </transition>
 
     <!-- LISTA -->
-    <div class="grid gap-6 max-w-xl w-full">
+    <div class="grid gap-6 max-w-xl w-full mx-auto">
       <div
         v-for="event in events"
         :key="event.id"
-        class="bg-(--bg) p-5 rounded-xl border border-white/20 hover:border-(--primary) transition"
+        class="bg-(--bg) p-5 rounded-xl border border-white/20 hover:border-(--primary) hover:scale-102 transition"
       >
         <h3 class="text-xl font-bold">{{ event.title }}</h3>
         <p class="mt-2">{{ event.description }}</p>

@@ -95,16 +95,16 @@ const save = async () => {
 <template>
   <Teleport to="body">
     <div class="fixed inset-0 z-50 flex items-center justify-center">
-      
+
       <!-- Overlay -->
-      <div 
-        class="absolute inset-0 bg-black/60"
+      <div
+        class="absolute inset-0 bg-black/60 "
         @click="$emit('close')"
       ></div>
 
       <!-- Modal -->
       <form class="relative w-full max-w-md p-6 z-10 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-xl hover:border-(--primary) text-white">
-        
+
         <!-- Header -->
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-xl font-semibold">
@@ -117,7 +117,7 @@ const save = async () => {
 
         <!-- Form -->
         <div class="flex flex-col gap-3">
-          
+
           <input
             v-model="form.name"
             placeholder="Nome"
@@ -178,7 +178,7 @@ const save = async () => {
 
 
 
-<!-- 
+<!--
 <script setup lang="ts">
 import { ref, watch, computed } from 'vue'
 import { createUser, updateUser } from '@/services/userService'
@@ -276,14 +276,14 @@ const save = async () => {
 <template>
   <Teleport to="body">
     <div class="fixed inset-0 z-50 flex items-center justify-center">
-      
-      <div 
+
+      <div
         class="absolute inset-0 bg-black/60"
         @click="$emit('close')"
       ></div>
 
       <form class="relative w-full max-w-md p-6 z-10 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 shadow-xl hover:border-(--primary) text-white">
-        
+
         <div class="flex justify-between items-center mb-4">
           <h2 class="text-xl font-semibold">
             {{ isEdit ? 'Editar Usuário' : 'Novo Usuário' }}
@@ -294,7 +294,7 @@ const save = async () => {
         </div>
 
         <div class="flex flex-col gap-3">
-          
+
           <input
             v-model="form.username"
             placeholder="Nome"

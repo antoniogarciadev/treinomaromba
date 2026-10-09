@@ -63,16 +63,16 @@ const save = async () => {
 </script>
 
 <template>
-  <div class="relative min-h-screen flex justify-center p-10">
-    
-    <div class="w-full flex flex-col md:flex-row gap-4 p-10">
-      <div class="text-white p-6 rounded-2xl shadow-md w-full max-w-lg h-120 md:h-110 border border-(--primary) bg-white/10 backdrop-blur-lg space-y-8 flex flex-col justify-center">
+  <div class="relative min-h-screen flex justify-center py-10">
+
+    <div class="w-full flex flex-col md:flex-row gap-4">
+      <div class="text-white p-6 rounded-2xl shadow-md w-full mx-auto max-w-lg h-120 md:h-110 border border-(--primary) bg-white/10 backdrop-blur-lg space-y-8 flex flex-col justify-center">
         <i class="ri-user-line text-4xl self-center"></i>
         <h1 class="text-2xl font-bold">
           Meu Perfil
         </h1>
         <div class="flex flex-col gap-3">
-      
+
           <p>Nome: {{ form.name }}</p>
           <p>Email: {{ form.email }}</p>
           <p>Telefone: {{ form.phone? form.phone : "Não Registrado" }}</p>
@@ -100,7 +100,7 @@ const save = async () => {
           {{ message }}
         </p>
         <form class="flex flex-col gap-3">
-      
+
           <div>
               <label class="text-white text-sm" for="name">Nome *</label>
               <input
@@ -122,7 +122,7 @@ const save = async () => {
                 id="email"
               />
             </div>
-      
+
             <!-- Telefone -->
             <div>
               <label class="text-white text-sm" for="phone">Telefone</label>
